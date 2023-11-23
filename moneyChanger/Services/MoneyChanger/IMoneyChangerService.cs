@@ -17,5 +17,11 @@ namespace moneyChanger.Services.MoneyChanger
         /// <param name="date"></param>
         /// <returns></returns>
         decimal ExchangeCurrency(string sourceCurrency, string destinationCurrency,decimal amount, DateTime date);
+
+        /// <summary>
+        /// Load Currency 
+        /// </summary>
+        /// <param name="currenciesRate"></param>
+        void LoadCurrencyRates(Dictionary<string, decimal> currenciesRate);
     }
 }

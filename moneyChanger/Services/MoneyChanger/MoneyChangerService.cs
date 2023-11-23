@@ -9,16 +9,20 @@ namespace moneyChanger.Services.MoneyChanger
 {
     public class MoneyChangerService : IMoneyChangerService
     {
-        private readonly Dictionary<string,decimal> _currenciesRate;
+        private Dictionary<string,decimal> _currenciesRate;
         
-
-        public MoneyChangerService(Dictionary<string, decimal> currenciesRate)
+        public void LoadCurrencyRates(Dictionary<string, decimal> currenciesRate)
         {
             _currenciesRate = currenciesRate;
         }
 
         public decimal ExchangeCurrency(string sourceCurrency, string destinationCurrency, decimal amount, DateTime date)
         {
+            if(_currenciesRate == null)
+            {
+                throw new ArgumentNullException("First call the load currency method");
+            }
+
             if(string.IsNullOrEmpty(sourceCurrency))
             {
                 throw new ArgumentNullException(nameof(sourceCurrency));

@@ -14,7 +14,8 @@ namespace MoneyChanger.Tests
                 { "USD", 1.2m },
                 { "CHF", 0.96m }
             };
-            var service = new MoneyChangerService(rates);
+            var service = new MoneyChangerService();
+            service.LoadCurrencyRates(rates);
 
             // Act
             var result = service.ExchangeCurrency("USD", "CHF", 120m, DateTime.UtcNow);
@@ -28,7 +29,8 @@ namespace MoneyChanger.Tests
         {
             // Arrange
             var rates = new Dictionary<string, decimal> { { "EUR", 1.0m } };
-            var service = new MoneyChangerService(rates);
+            var service = new MoneyChangerService();
+            service.LoadCurrencyRates(rates);
 
             // Act and Assert
             Assert.Throws<InvalidCurrencyException>(() => service.ExchangeCurrency("USD", "EUR", 100m, DateTime.UtcNow));

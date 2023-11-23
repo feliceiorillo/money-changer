@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.BLL", "moneyCh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyChanger.Tests", "MoneyChanger.Tests\MoneyChanger.Tests.csproj", "{C1198381-FD7D-4A31-B883-78F3FA83AFCC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoneyChanger.WebApi", "MoneyChanger.WebApi\MoneyChanger.WebApi.csproj", "{7FA5FA5F-8F03-4875-92C1-4E2CE5FC1A66}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{C1198381-FD7D-4A31-B883-78F3FA83AFCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1198381-FD7D-4A31-B883-78F3FA83AFCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1198381-FD7D-4A31-B883-78F3FA83AFCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FA5FA5F-8F03-4875-92C1-4E2CE5FC1A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FA5FA5F-8F03-4875-92C1-4E2CE5FC1A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FA5FA5F-8F03-4875-92C1-4E2CE5FC1A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FA5FA5F-8F03-4875-92C1-4E2CE5FC1A66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
