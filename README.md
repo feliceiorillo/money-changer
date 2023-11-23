@@ -23,3 +23,6 @@
  var result = _moneyChangerService.ExchangeCurrency(request.SourceCurrency, request.DestinationCurrency, request.Amount, request.Date);
                 
  ```
+# Todo 
+1. Add a caching system
+2. Read this value from appsettings stored online with IOptionsSnapshot feature
